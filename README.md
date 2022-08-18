@@ -1,5 +1,5 @@
 # HnM-Pernsonalized-Fashion-Recommendations
-Kaggle competition
+## Kaggle competition
 
 - 본 프로젝트는 kaggle competition 연관 프로젝트로, fast fashion 브랜드인 H&M의 데이터를 이용하여 고객들에게 상품을 추천해주는 것이 목표이다.
 - 주어진 데이터는 다음과 같다. 
@@ -11,6 +11,7 @@ Kaggle competition
     하지만 ```articles.csv```에 각 article의 모양과 색깔 정보 등의 상세한 메타데이터가 담겨있기 때문에, ```images folder```의 이미지 데이터를 처리해서 추가적으로 얻어낼 정보가 없다고 판단하여 사용하지 않을 예정이다.
 - ```transactions_train.csv```에는 2018년 9월 20일부터 2020년 9월 22일까지, 약 2년간의 구매정보가 있다. 해당 데이터의 마지막 log날짜인 2020년 9월 22일 이후로 일주일동안 고객들이 구매할 상품을 12개까지 추천하는 것이 최종적으로 해야 할 일이다. ```transactions_train.csv``` 데이터에 제시된 customer 모두에게 12개씩의 article을 추천해야 하고, 성능평가는 **MAP@12**로 진행한다.([MAP: Mean Average Precision](https://danthetech.netlify.app/DataScience/evaluation-metrics-for-recommendation-system), 간단히 설명하자면 MAP는 precision의 응용 metric으로, 상품에 대한 추천 정확도와 추천 시 우선순위까지 반영하는 성능평가지표이다.)
 
+## Notebook
 - 본 프로젝트는 총 3개의 notebook에 걸쳐 기술을 진행할 예정이다.  
 
 > -  ```1st notebook: EDA(Exploratory Data Analysis)```  
@@ -21,6 +22,7 @@ Kaggle competition
 > -  ```3rd notebook: Ranking model```  
 >    - 두번째 notebook에서 만들어진 article 후보군에 대해 ranking을 산정함으로써 고객마다 최종적인 추천을 진행한다.
 
+## 결과
 - 1. EDA에선 데이터를 살펴보면서, feature의 내용을 이해하고 친숙해지는 것에 중점을 두고 진행하였다. 해당 notebook을 굳이 보지 않더라도 위의 내용들을 숙지한다면 추천과 관련된 모델의 설명이 적혀있는 ```2. Candidate generate```이나 ```3. Ranking model```을 살펴보는 데에 지장이 없을 것이다.
 - 2. Candidate generate
     - 고객에게 추천할 상품들을 여러가지 방식으로 선택하는 과정이다.  1) 최근에 많이 판매됐던 상품들과 연령대별로 많이 팔렸던 상품들을 선택하는 ‘Best item’ 2) 최근 구매했던 상품과 상품코드가 같은 상품을 선택하는 ‘Same product code item’  3) 상품의 메타데이터들을 활용해 최근 구매 상품과 비슷한 상품을 추천하는 ‘Item-based collaborative filtering’ 4) 구매 이력을 바탕으로 같은 상품을 구매했던 고객들의 다른 상품 구매를 반영하여 추천을 진행하는 ‘Graph Embedding(User-based collaborative filtering)’ 등 총 4가지 방법으로 고객별 후보군을 선정하였고, validation 데이터를 통해 검증해본 결과 고객별 recall의 평균이 0.0945 정도로 나왔다.
