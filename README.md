@@ -14,7 +14,7 @@ Kaggle competition
 
 - 본 프로젝트는 총 3개의 notebook에 걸쳐 기술을 진행할 예정이다.  
 > ```1st notebook: EDA(Exploratory Data Analysis)```  
-&nbsp;&nbsp;&nbsp;&nbsp;- 주어진 데이터들에 대해 결측치와 이상값 등이 있는지 살펴보고, 각종 시각화와 통계량 분석 등을 통해 여러 방향에서 데이터를 분석해보는 EDA를 진행한다.  
+    - 주어진 데이터들에 대해 결측치와 이상값 등이 있는지 살펴보고, 각종 시각화와 통계량 분석 등을 통해 여러 방향에서 데이터를 분석해보는 EDA를 진행한다.  
 ```2nd notebook: Candidate generate```  
 &nbsp;&nbsp;&nbsp;- 주어진 데이터를 활용하여 고객마다 수백 개의 article들로 구성된 후보군을 생성하는 작업을 진행한다.  
 ```3rd notebook: Ranking model```  
