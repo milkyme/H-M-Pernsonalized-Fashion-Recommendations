@@ -17,6 +17,6 @@ Kaggle competition
 > -  ```1st notebook: EDA(Exploratory Data Analysis)```  
 >    - 주어진 데이터들에 대해 결측치와 이상값 등이 있는지 살펴보고, 각종 시각화와 통계량 분석 등을 통해 여러 방향에서 데이터를 분석해보는 EDA를 진행한다.  
 > -  ```2nd notebook: Candidate generate```  
->   - 주어진 데이터를 활용하여 고객마다 수백 개의 article들로 구성된 후보군을 생성하는 작업을 진행한다.  
+>    - 주어진 데이터를 활용하여 고객마다 수백 개의 article들로 구성된 후보군을 생성하는 작업을 진행한다.  
 > -  ```3rd notebook: Ranking model```  
->   - 두번째 notebook에서 만들어진 article 후보군에 대해 ranking을 산정함으로써 고객마다 최종적인 추천을 진행한다.
+>    - 두번째 notebook에서 만들어진 article 후보군에 대해 ranking을 산정함으로써 고객마다 최종적인 추천을 진행한다.
