@@ -21,7 +21,7 @@ Kaggle competition
 > -  ```3rd notebook: Ranking model```  
 >    - 두번째 notebook에서 만들어진 article 후보군에 대해 ranking을 산정함으로써 고객마다 최종적인 추천을 진행한다.
 
-- 1. EDA에선 
+- 1. EDA에선 데이터를 살펴보면서, feature의 내용을 이해하고 친숙해지는 것에 중점을 두고 진행하였다. 해당 notebook을 굳이 보지 않더라도 위의 내용들을 숙지한다면 추천과 관련된 모델의 설명이 적혀있는 ```2. Candidate generate```이나 ```3. Ranking model```을 살펴보는 데에 지장이 없을 것이다.
 - 2. Candidate generate
     - 고객에게 추천할 상품들을 여러가지 방식으로 선택하는 과정이다.  1) 최근에 많이 판매됐던 상품들과 연령대별로 많이 팔렸던 상품들을 선택하는 ‘Best item’ 2) 최근 구매했던 상품과 상품코드가 같은 상품을 선택하는 ‘Same product code item’  3) 상품의 메타데이터들을 활용해 최근 구매 상품과 비슷한 상품을 추천하는 ‘Item-based collaborative filtering’ 4) 구매 이력을 바탕으로 같은 상품을 구매했던 고객들의 다른 상품 구매를 반영하여 추천을 진행하는 ‘Graph Embedding(User-based collaborative filtering)’ 등 총 4가지 방법으로 고객별 후보군을 선정하였고, validation 데이터를 통해 검증해본 결과 고객별 recall의 평균이 0.0945 정도로 나왔다.
     - 평균 Recall이 0.0945가 나왔다는 말은 어떤 고객이 상품을 구매했을 때 평균적으로 약 9.45% 확률로 해당 상품이 candidate에 포함되어 있다는 것을 의미한다. 이게 어느 정도 수치인지는 당연히 상대적일 수밖에 없어서 설명을 덧붙이자면, 해당 Kaggle competition의 최종 우승자가 제출한 모델의 test 데이터에 대한 MAP@12가 0.037 정도였다. 
