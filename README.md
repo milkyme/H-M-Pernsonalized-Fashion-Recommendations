@@ -14,12 +14,12 @@
 ## Notebook
 - 본 프로젝트는 총 3개의 notebook에 걸쳐 기술을 진행할 예정이다.  
 
-> -  1st notebook: ```EDA(Exploratory Data Analysis)```  
+> -  1st notebook: [```EDA(Exploratory Data Analysis)```](https://github.com/milkyme/HnM-Pernsonalized-Fashion-Recommendations/blob/master/1.EDA.ipynb)  
 >    - 주어진 데이터들에 대해 결측치와 이상값 등이 있는지 살펴보고, 각종 시각화와 통계량 분석 등을 통해 여러 방향에서 데이터를 분석해보는 EDA를 진행한다.  
-> -  2nd notebook: ```Candidate Generate```  
+> -  2nd notebook: [```Candidate Generate```](https://github.com/milkyme/HnM-Pernsonalized-Fashion-Recommendations/blob/master/2.Candidates%20Generate.ipynb)  
 >    - 주어진 데이터를 활용하여 고객마다 수백 개의 article들로 구성된 후보군을 생성하는 작업을 진행한다.  
->    - Graph Neural Network을 사용하여 후보군을 추천하는 내용은 상당히 길어져서 ```2-1.Graph embedding```이라는 별도의 notebook에 기술하였다.
-> -  3rd notebook: ```Ranking Model```  
+>    - Graph Neural Network을 사용하여 후보군을 추천하는 내용은 상당히 길어져서 [```2-1.Graph embedding```](https://github.com/milkyme/HnM-Pernsonalized-Fashion-Recommendations/blob/master/2_1.Graph%20Embedding.ipynb)이라는 별도의 notebook에 기술하였다.
+> -  3rd notebook: [```Ranking Model```](https://github.com/milkyme/HnM-Pernsonalized-Fashion-Recommendations/blob/master/3.Ranking%20Model.ipynb)  
 >    - 두번째 notebook에서 만들어진 article 후보군에 대해 ranking을 산정함으로써 고객마다 최종적인 추천을 진행한다.
 
 ## 결과
