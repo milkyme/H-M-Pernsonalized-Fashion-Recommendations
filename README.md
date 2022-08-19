@@ -1,5 +1,5 @@
 # HnM-Pernsonalized-Fashion-Recommendations
-## Kaggle competition
+## [Kaggle competition](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations)
 
 - 본 프로젝트는 kaggle competition 연관 프로젝트로, fast fashion 브랜드인 H&M의 데이터를 이용하여 고객들에게 상품을 추천해주는 것이 목표이다.
 - 주어진 데이터는 다음과 같다. 
