@@ -32,7 +32,7 @@
      4) 구매 이력을 바탕으로 같은 상품을 구매했던 고객들의 다른 상품 구매를 반영하여 추천을 진행하는 ‘Graph Embedding(User-based collaborative filtering)’  
     총 4가지 방법으로 고객별 후보군을 선정하였고, validation 데이터를 통해 검증해본 결과 고객별 recall의 평균이 0.0945 정도로 나왔다.
     - 성능: 평균 Recall이 0.0945가 나왔다는 말은 어떤 고객이 상품을 구매했을 때 평균적으로 약 9.45% 확률로 해당 상품이 candidate에 포함되어 있다는 것을 의미한다. 이게 어느 정도 수치인지는 당연히 상대적일 수밖에 없어서 설명을 덧붙이자면, 해당 Kaggle competition의 최종 우승자가 제출한 모델의 test 데이터에 대한 MAP@12가 0.037 정도였다.  
-        - 1) MAP@12는 12개만 추천하여 산출한 수치이고 candidate에는 수백개의 article 후보군이 있다. 그리고 2) MAP는 Mean Average Precision으로 어디까지나 기본적인 계산방식은 precision이라 필자가 검증할 때 사용한 recall과는 직접적인 비교가 불가능하다.  
+        - 성능에 대해 고려해봐야 할 사항으로는 1) MAP@12는 12개만 추천하여 산출한 수치이고 candidate에는 수백개의 article 후보군이 있다. 그리고 2) MAP는 Mean Average Precision으로 어디까지나 기본적인 계산방식은 precision이라 필자가 검증할 때 사용한 recall과는 직접적인 비교가 불가능하다.  
         - 하지만 1) 12개와 수백개의 간극은 ranking 모델에서 한번 더 정교화된 추천을 진행할 것이므로 극복할 여지가 다분하다. 2) precision과 recall은 분명 다르긴 하지만, metric을 적용할 때 분모에 포함되는 요소는 달라도 분자에 포함되는 요소는 같다. 따라서 검증시에 사용한 평균 recall 수치도 최종 평가시에 사용해야 하는 metric인 MAP와 충분한 상관관계가 존재한다.
     - ***결론적으로 candiate 후보군이 얼마나 잘 선정되었는지 수치적으로 직접적인 비교는 힘들지만, 간접적으로 추측해본 바로는 ranking 모델까지 훈련을 잘 시킨다면 유의미한 결과를 기대해볼 수 있겠다.***  
 - 3. Ranking Model
